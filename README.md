@@ -1,2 +1,5 @@
-# first-programme
-bhok layo
+#include <stdio.h>
+main(){
+printf("HELLO WORLD");
+}
+
