@@ -1,0 +1,50 @@
+ int yendsecond, xendsecond;
+  int xendminute, yendminute;
+  int xendhour, yendhour;
+  float theta;
+  void setup(){
+    
+    size(600,600);
+    background(150);
+    xendsecond= 0;
+    yendsecond= 100;
+    xendminute= 60;
+    yendminute= 0;
+    xendhour = 0;
+    yendhour = 40;
+    frameRate(1);
+  }
+ 
+ void draw(){
+   background(150);
+   translate(width/2,height/2);
+   fill(color(#18F271));
+   
+   stroke(255);
+   strokeWeight(20);
+   ellipse(0,0,200,300);
+   stroke(255);
+   strokeWeight(3);
+   stroke(color(255,0,0));
+   line(0,0,xendsecond,yendsecond);
+   fill(color(#181DF2));
+   strokeWeight(4);
+   line(0,0,xendminute,yendminute);
+   strokeWeight(8);
+   line(0,0,xendhour,yendhour);
+   ellipse(0,0,20,30);
+
+    text("Rabin",-15,-50);
+    text("12",-5,-148);
+   text("6",-5,155);
+   text("9",-107,0);
+   text("3",99,0);
+   theta += TWO_PI/60;
+   xendsecond = int(100 *cos(theta));
+   yendsecond = int(100 * sin(theta));
+   xendminute = int(60 * cos(theta/60));
+   yendminute = int(60 * sin(theta/60));
+   xendhour = int(40 * cos(theta/60/12));
+   yendhour = int(40 * sin(theta/60/12));
+ }
+    
